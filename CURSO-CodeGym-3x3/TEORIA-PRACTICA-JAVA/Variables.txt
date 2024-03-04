@@ -1,0 +1,32 @@
+Las variables son elementos especiales para almacenar datos 
+
+Cada variable en Java tiene tres propiedades importantes: tipo , nombre y valor .
+
+CREAR UNA VARIABLE
+    En el lenguaje Java, creamos una variable usando un comando que toma esta forma:
+
+        type name;
+    Declarar una variable
+    donde tipo es el tipo de la variable (que corresponde al tipo de los valores que la variable puede almacenar) 
+    y nombre es el nombre de la variable.
+
+Ejemplos:
+
+    int a;
+
+        Descripción
+        Cree una variable llamada acuyo tipo sea int.
+
+    Los dos tipos más utilizados son los números enteros (indicados por int) y texto (indicado por String). 
+    El doubletipo también es popular. Representa números fraccionarios (reales).
+
+    Asignación
+
+        name = value;
+
+     solo se puede poner un valor en una variable
+
+
+    EJERCICIO
+
+    Solution3.java
