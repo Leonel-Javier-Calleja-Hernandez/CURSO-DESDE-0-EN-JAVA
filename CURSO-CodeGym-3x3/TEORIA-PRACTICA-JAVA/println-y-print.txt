@@ -1,0 +1,43 @@
+El cuerpo de un método consta de comandos . Incluso se podría decir que un método 
+es un grupo de comandos a los que se les ha dado un nombre, es decir, el nombre del
+ método. Cualquier perspectiva es precisa.
+
+    Ejemplos de comandos:
+    Dominio            Descripción (lo que hace)
+
+    System.out.println(1); 
+    Muestra un número en la pantalla:
+    1
+    System.out.println("Amigo");
+    Muestra un string en la pantalla:
+    Amigo
+
+NOTA
+En Java, el tamaño importa en términos de si las letras en un método están en mayúsculas
+ o minúsculas . El System.out.println()comando funcionará , pero system.out.println() no lo hará .
+
+
+Diferencias entre println() y print()
+
+    println: el espacio ocupa la linea completa
+
+    System.out.println("Amigo");
+    System.out.println("IsThe");
+    System.out.println("Best");
+    
+    EN PANTALLA:
+
+    Amigo
+    IsThe
+    Best
+
+    -----------------------------------
+    print: no hay espaciado automatico
+
+    System.out.print("Amigo");
+    System.out.print("IsThe");
+    System.out.print("Best");
+
+    EN PANTALLA:
+
+    AmigoIsTheBest
