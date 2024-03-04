@@ -1,7 +1,7 @@
 package es.codegym.games.ticktacktoe;
 
 import com.codegym.engine.cell.*;
-//  Tenemos un método que se encarga de mostrar una celda.
+
 public class TicTacToeGame extends Game {
     
     private int [][] model = new int [3][3];
@@ -18,6 +18,7 @@ public class TicTacToeGame extends Game {
     public void initialize(){
         setScreenSize(3,3);
         startGame();
+        updateView();
     }
     
     public void updateCellView(int x, int y, int value){
@@ -31,3 +32,13 @@ public class TicTacToeGame extends Game {
         Si el value es 1, muestre una cruz "X" en la celda. (gran X latina),
         Si el value es 2, muestre el cero "O" en la celda. (o latina grande).*/
     }
+    
+    // método que mostrará todas las celdas de la matriz model en la pantalla o tablero de juego
+    public void updateView(){
+        for (int x = 0; x<3 ; x++)
+            for(int y = 0; y<3; y++){
+               updateCellView(x, y, model[x][y]);
+            }
+    }
+
+}
