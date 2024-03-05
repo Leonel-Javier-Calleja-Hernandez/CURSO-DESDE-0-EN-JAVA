@@ -34,10 +34,11 @@ public class TicTacToeGame extends Game {
             setCellValueEx(x, y, Color.WHITE, "O", Color.BLUE);
         else
             setCellValueEx(x, y, Color.WHITE, " ", Color.WHITE);
-    }
         /* Si el value es 0, muestre una línea vacía en la celda - " " (espacio),
         Si el value es 1, muestre una cruz "X" en la celda. (gran X latina),
         Si el value es 2, muestre el cero "O" en la celda. (o latina grande).*/
+    }
+     
     
     // método que mostrará todas las celdas de la matriz model en la pantalla o tablero de juego
     public void updateView(){
@@ -60,5 +61,12 @@ public class TicTacToeGame extends Game {
         currentPlayer = 3 - currentPlayer;
         // currentPlayer = 3 - currentPlayer; es la logica para cambiar de jugador 1 a jugador 2
     }
-
+    
+    public boolean checkWin(int x, int y, int n){
+        if (model [x][0] == n && model [x][1] == n && model [x][2] == n)
+        return true;
+        if (model [0][y] == n && model [1][y] == n && model [2][y] == n)
+        return true;
+    return false;
+    }
 }
