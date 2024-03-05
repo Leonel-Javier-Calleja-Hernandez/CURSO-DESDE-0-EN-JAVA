@@ -43,7 +43,9 @@ public class TicTacToeGame extends Game {
     /*el método public void onMouseLeftClick(int x, int y). El motor del juego lo llamará cada 
     vez que el usuario haga clic en el campo de juego. También transmitirá las coordenadas de la celda 
     en la que el usuario hizo clic con el mouse; (x,y).*/
-    public void onMouseLeftClick(int x, int y){
+   public void onMouseLeftClick(int x, int y){
+        if (model[x][y] != 0)
+            return;
         model[x][y] = currentPlayer;
         updateView();
         currentPlayer = 3 - currentPlayer;

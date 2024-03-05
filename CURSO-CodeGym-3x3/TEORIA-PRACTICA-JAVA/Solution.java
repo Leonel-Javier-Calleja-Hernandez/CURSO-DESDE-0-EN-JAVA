@@ -8,7 +8,6 @@ public class Solution {
     public static void main(String[] args) {
         //escribe aquí tu código
         System.out.print("Amigo es muy listo");
-    
 
     }
 }

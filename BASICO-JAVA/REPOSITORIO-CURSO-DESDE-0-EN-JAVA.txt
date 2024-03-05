@@ -1,0 +1,16 @@
+…o crear un nuevo repositorio en la línea de comando
+
+echo "# CURSO-DESDE-0-EN-JAVA" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/leoneljaviercallejahernandez/CURSO-DESDE-0-EN-JAVA.git
+git push -u origin main
+
+…o enviar un repositorio existente desde la línea de comando
+
+git remote add origin https://github.com/leoneljaviercallejahernandez/CURSO-DESDE-0-EN-JAVA.git
+git branch -M main
+git push -u origin main
+
