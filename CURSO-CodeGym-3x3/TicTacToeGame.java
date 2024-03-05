@@ -2,6 +2,8 @@ package es.codegym.games.ticktacktoe;
 
 import com.codegym.engine.cell.Color;
 import com.codegym.engine.cell.Game;
+import com.codegym.engine.cell.*;
+// import com.codegym.engine.cell.*; importa todo lo necesario para el proyecto
 
 public class TicTacToeGame extends Game {
     
@@ -58,8 +60,15 @@ public class TicTacToeGame extends Game {
             return;
         model[x][y] = currentPlayer;
         updateView();
+        
+        if(checkWin(x,y,currentPlayer)){
+        isGameStopped = true;
+        showMessageDialog(Color.NONE, " EL JUGADOR #" + currentPlayer + " GANADOR 🥳!", Color.GREEN, 25);
+        }
+         // le pasamos las cordenadas, currentPlayer(Numero Del jugador) y mostramos en pantalla un showMessageDialog(MENSAJE) de el jugador ganador   
         currentPlayer = 3 - currentPlayer;
         // currentPlayer = 3 - currentPlayer; es la logica para cambiar de jugador 1 a jugador 2
+        
     }
     
     public boolean checkWin(int x, int y, int n){
@@ -67,6 +76,11 @@ public class TicTacToeGame extends Game {
         return true;
         if (model [0][y] == n && model [1][y] == n && model [2][y] == n)
         return true;
+        if (model [0][0] == n && model [1][1] == n && model [2][2] == n)
+        return true;
+        if (model [2][0] == n && model [1][1] == n && model [0][2] == n)
+        return true;
     return false;
+    // revisa las cordenadas donde se le a dado clik de todo el juego
     }
 }
